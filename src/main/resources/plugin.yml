@@ -1,0 +1,15 @@
+name: SoulRoles
+version: ${version}
+main: com.oneblockmc.soulroles.SoulRolesPlugin
+api-version: '1.21'
+description: Prototype role and permanent-heart game mode for Paper 26.2.
+author: Codex
+commands:
+  soulroles:
+    description: Manage SoulRoles.
+    usage: /soulroles <status|reset|reload|set|give>
+    aliases: [sr]
+permissions:
+  soulroles.admin:
+    description: Allows managing SoulRoles.
+    default: op

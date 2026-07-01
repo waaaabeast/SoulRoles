@@ -1,0 +1,52 @@
+# Initial/reset role counts. Counts are capped to the number of tracked players.
+group-a-count: 1
+group-b-count: 2
+
+# Base role hearts.
+group-a-hearts: 5
+group-b-hearts: 20
+normal-hearts: 10
+
+# Crafted permanent hearts.
+heart-item-extra-hearts: 1
+
+# If a player has more than this many hearts, the client display is scaled down
+# so huge max health values do not fill the screen. Set to 0 to disable scaling.
+max-hearts-on-screen: 20
+
+messages:
+  role-a: "<red>You are Group A. You have reduced hearts, but your kills pass Group A onward."
+  role-b: "<gold>You are Group B. You have boosted hearts."
+  role-normal: "<gray>You are normal."
+
+items:
+  soul:
+    material: ECHO_SHARD
+    name: "<dark_purple>Soul"
+    custom-model-data: 101001
+  heart:
+    material: HEART_OF_THE_SEA
+    name: "<red>Craftable Heart"
+    custom-model-data: 101002
+  resetter:
+    material: NETHER_STAR
+    name: "<aqua>Class Resetter"
+    custom-model-data: 101003
+  swap:
+    material: AMETHYST_SHARD
+    name: "<light_purple>Class A/B Swap"
+    custom-model-data: 101004
+  add-a:
+    material: RECOVERY_COMPASS
+    name: "<yellow>Add Group A Player"
+    custom-model-data: 101005
+
+recipes:
+  heart:
+    enabled: true
+  resetter:
+    enabled: true
+  swap:
+    enabled: true
+  add-a:
+    enabled: true
