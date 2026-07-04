@@ -468,9 +468,10 @@ public final class SoulRolesPlugin extends JavaPlugin implements Listener, Comma
 
         if (getConfig().getBoolean("recipes.heart.enabled", true)) {
             ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(this, "heart"), createItem(CustomItem.HEART, 1));
-            recipe.shape("DND", "NSN", "DND");
+            recipe.shape("DND", "OSO", "DND");
             recipe.setIngredient('D', Material.DIAMOND_BLOCK);
             recipe.setIngredient('N', Material.NETHERITE_INGOT);
+            recipe.setIngredient('O', Material.OBSIDIAN);
             recipe.setIngredient('S', new RecipeChoice.ExactChoice(createItem(CustomItem.SOUL, 1)));
             getServer().addRecipe(recipe);
         }
@@ -486,19 +487,21 @@ public final class SoulRolesPlugin extends JavaPlugin implements Listener, Comma
 
         if (getConfig().getBoolean("recipes.swap.enabled", true)) {
             ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(this, "swap"), createItem(CustomItem.SWAP, 1));
-            recipe.shape("ASA", "SDS", "ASA");
+            recipe.shape("APA", "SDS", "APA");
             recipe.setIngredient('A', Material.AMETHYST_SHARD);
             recipe.setIngredient('S', new RecipeChoice.ExactChoice(createItem(CustomItem.SOUL, 1)));
             recipe.setIngredient('D', Material.DIAMOND);
+            recipe.setIngredient('P', Material.PRISMARINE_CRYSTALS);
             getServer().addRecipe(recipe);
         }
 
         if (getConfig().getBoolean("recipes.add-a.enabled", true)) {
             ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(this, "add_a"), createItem(CustomItem.ADD_A, 1));
-            recipe.shape("RSR", "SCS", "RSR");
-            recipe.setIngredient('R', Material.REDSTONE_BLOCK);
+            recipe.shape("GSG", "RCR", "GSG");
+            recipe.setIngredient('R', Material.REDSTONE_DUST);
             recipe.setIngredient('S', new RecipeChoice.ExactChoice(createItem(CustomItem.SOUL, 1)));
-            recipe.setIngredient('C', Material.RECOVERY_COMPASS);
+            recipe.setIngredient('C', Material.COMPASS);
+            recipe.setIngredient('G', Material.GHAST_TEAR);
             getServer().addRecipe(recipe);
         }
     }
