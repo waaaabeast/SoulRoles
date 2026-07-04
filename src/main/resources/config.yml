@@ -25,11 +25,11 @@ items:
     name: "<dark_purple>Soul"
     custom-model-data: 101001
   heart:
-    material: HEART_OF_THE_SEA
+    material: NETHER_STAR
     name: "<red>Craftable Heart"
     custom-model-data: 101002
   resetter:
-    material: NETHER_STAR
+    material: HEART_OF_THE_SEA
     name: "<aqua>Class Resetter"
     custom-model-data: 101003
   swap:
