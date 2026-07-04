@@ -1,6 +1,6 @@
 # Initial/reset role counts. Counts are capped to the number of tracked players.
 group-a-count: 1
-group-b-count: 2
+group-b-count: 1
 
 # Base role hearts.
 group-a-hearts: 5
@@ -17,7 +17,7 @@ max-hearts-on-screen: 20
 messages:
   role-a: "<red>You are Group A. You have reduced hearts, but your kills pass Group A onward."
   role-b: "<gold>You are Group B. You have boosted hearts."
-  role-normal: "<gray>You are normal."
+  role-normal: "<gray>You currently have no role."
 
 items:
   soul:
