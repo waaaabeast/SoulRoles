@@ -86,12 +86,6 @@ public final class SoulRolesPlugin extends JavaPlugin implements Listener, Comma
         showRole(player);
     }
 
-    @EventHandler
-    public void onInventoryOpen(InventoryOpenEvent event) {
-        if (event.getPlayer() instanceof Player player) {
-            Bukkit.getScheduler().runTaskLater(this, () -> showRole(player), 1L);
-        }
-    }
 
     @EventHandler
     public void onDeath(PlayerDeathEvent event) {
