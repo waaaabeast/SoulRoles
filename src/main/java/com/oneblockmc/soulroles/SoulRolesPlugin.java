@@ -499,7 +499,7 @@ public final class SoulRolesPlugin extends JavaPlugin implements Listener, Comma
         if (getConfig().getBoolean("recipes.add-a.enabled", true)) {
             ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(this, "add_a"), createItem(CustomItem.ADD_A, 1));
             recipe.shape("GSG", "RCR", "GSG");
-            recipe.setIngredient('R', Material.REDSTONE_DUST);
+            recipe.setIngredient('R', Material.REDSTONE);
             recipe.setIngredient('S', new RecipeChoice.ExactChoice(createItem(CustomItem.SOUL, 1)));
             recipe.setIngredient('C', Material.COMPASS);
             recipe.setIngredient('G', Material.GHAST_TEAR);
