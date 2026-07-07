@@ -15,8 +15,8 @@ heart-item-extra-hearts: 1
 max-hearts-on-screen: 20
 
 messages:
-  role-a: "<red>You are Group A. You have reduced hearts, but your kills pass Group A onward."
-  role-b: "<gold>You are Group B. You have boosted hearts."
+  role-a: "<red>You are Infected. You have reduced hearts, but your kills pass the Infection onward."
+  role-b: "<gold>You are a Spark. You have boosted hearts."
   role-normal: "<gray>You currently have no role."
 
 items:
@@ -30,15 +30,15 @@ items:
     custom-model-data: 101002
   resetter:
     material: HEART_OF_THE_SEA
-    name: "<aqua>Class Resetter"
+    name: "<aqua>Resetter"
     custom-model-data: 101003
   swap:
     material: AMETHYST_SHARD
-    name: "<light_purple>Class A/B Swap"
+    name: "<light_purple>Swap Infected/Spark"
     custom-model-data: 101004
   add-a:
     material: RECOVERY_COMPASS
-    name: "<yellow>Add Group A Player"
+    name: "<yellow>Add Infected Player"
     custom-model-data: 101005
 
 recipes:
