@@ -478,10 +478,11 @@ public final class SoulRolesPlugin extends JavaPlugin implements Listener, Comma
 
         if (getConfig().getBoolean("recipes.resetter.enabled", true)) {
             ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(this, "resetter"), createItem(CustomItem.RESETTER, 1));
-            recipe.shape("ESE", "SNS", "ESE");
+            recipe.shape("ESE", "DND", "ESE");
             recipe.setIngredient('E', Material.ENDER_EYE);
             recipe.setIngredient('S', new RecipeChoice.ExactChoice(createItem(CustomItem.SOUL, 1)));
-            recipe.setIngredient('N', Material.NETHER_STAR);
+            recipe.setIngredient('N', Material.DIAMOND_BLOCK);
+            recipe.setIngredient('D', Material.DIAMOND);
             getServer().addRecipe(recipe);
         }
 
