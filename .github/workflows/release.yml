@@ -1,0 +1,36 @@
+name: Build JAR Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Make Gradle executable
+        run: chmod +x ./gradlew
+
+      - name: Build JAR
+        run: ./gradlew build
+
+      - name: Show built JARs
+        run: ls -la build/libs
+
+      - name: Upload JAR to release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/libs/*.jar
