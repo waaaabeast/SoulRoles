@@ -141,17 +141,17 @@ public final class SoulRolesPlugin extends JavaPlugin implements Listener, Comma
             case RESETTER -> {
                 rerollAll();
                 consumeOne(item, event.getPlayer());
-                announce(Component.text("SoulRoles classes were rerolled."));
+                announce(Component.text("Roles were shuffled."));
             }
             case SWAP -> {
                 swapAAndB();
                 consumeOne(item, event.getPlayer());
-                announce(Component.text("SoulRoles Group A and Group B were swapped."));
+                announce(Component.text("Infected and Spark were swapped."));
             }
             case ADD_A -> {
                 if (addRandomNormalToA()) {
                     consumeOne(item, event.getPlayer());
-                    announce(Component.text("A normal player was moved into Group A."));
+                    announce(Component.text("A normal player became Infected."));
                 } else {
                     event.getPlayer().sendMessage(Component.text("No normal tracked players are available."));
                 }
@@ -177,14 +177,14 @@ public final class SoulRolesPlugin extends JavaPlugin implements Listener, Comma
             case "status" -> handleStatus(sender, args);
             case "reset", "reroll" -> {
                 rerollAll();
-                sender.sendMessage(Component.text("SoulRoles classes rerolled for tracked players."));
+                sender.sendMessage(Component.text("Roles shuffled for tracked players."));
             }
             case "reload" -> {
                 reloadConfig();
                 loadData();
                 registerRecipes();
                 Bukkit.getOnlinePlayers().forEach(this::applyState);
-                sender.sendMessage(Component.text("SoulRoles reloaded."));
+                sender.sendMessage(Component.text("Roles reloaded."));
             }
             case "set" -> handleSet(sender, args);
             case "give" -> handleGive(sender, args);
